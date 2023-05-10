@@ -1,0 +1,102 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA_Compatible" content="IE+edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Did Coding Limited & James Granger Design ">
+    <meta>
+    <title> Phenolah's Portfolio Website </title>
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+    <link rel="canonical" href="{{request.path}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
+    <link rel="stylesheet" type="text/css" href="{% static "/css/style.css" %}">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+</head>
+
+<body class='movie' >
+<div class='container'>
+
+   <div class="row">
+   <div class="column">
+       <img class="left-image" src={% static 'images/movie.JPG'%} >
+   </div>
+   <div class="column">
+        <h1>MOVIE FINDER </h1>
+   </div>
+   <div class="column">
+       <img class="right-image" src={% static 'images/popcorns.JPG'%} >
+   </div>
+   </div>
+
+   <form id="genreform">
+   <div class="genre">
+       <h3> Choose a genre:</h3>
+   </div>
+
+  <div class="choice">
+     <select name="genre-choice" id="genre-choice" >
+         <option value="">Action</option>
+          <option value="">Romance</option>
+           <option value="">Adventure</option>
+            <option value="">Animation</option>
+             <option value="">Comedy</option>
+              <option value="">Crime</option>
+               <option value="">Documentary</option>
+                <option value="">Drama</option>
+                <option value="">Family</option>
+                <option value="">Fantasy</option>
+                <option value="">History</option>
+                <option value="">Horror</option>
+                <option value="">Music</option>
+                <option value="">Mystery</option>
+                <option value="">Sci-Fi</option>
+                <option value="">War</option>
+                <option value="">Thriller</option>
+      </select>
+        </div>
+      </form>
+  </div>
+  <div class="button">
+    <button class="genre-btn"> Let's Watch </button>
+  </div>
+
+<section class="container">
+
+<div class="movie-container">
+<div class='row'>
+ <div class='col-2'>
+  <div class="movie-posts">
+     <div class="movie-title"> Disobedience </div>
+        <div class="movie-img">
+            <img src="{% static 'images/lgbt.JPG'%}" alt="no image" width=170px height=220px >
+        </div>
+  </div>
+</div>
+<div class='col-2'>
+<div class="movie-text">
+   <p> we cant pretend or playing it out and i want
+   you babe and i cant lie i want you babe if we could then
+   we should just come together. you and i its alright
+   its perfect timing. im doing for what i wouldn't do for anybody
+   i haven't dreamed of getting to know you</p>
+</div>
+</div>
+</div>
+<div id="likeordislikebtn">
+   <button id="likebtn">
+     <i class="fa fa-thumbs-up" aria-hidden="true"></i>
+   </button>
+
+   <button id="dislikelikebtn">
+     <i class="fa fa-thumbs-down" aria-hidden="true"></i>
+   </button>
+</div>
+</section>
+
+
+</body>
+</html>
