@@ -61,6 +61,7 @@
      scale: 0.9;
 }
 
+
 .movie .right-image{
      border-radius: 50%;
      height: 80;
@@ -74,6 +75,7 @@
     align-items: center;
     font-weight:normal;
     text-align: center;
+    width: 20px;
 }
 .option{
    display: center;
@@ -168,3 +170,7 @@
   padding: 5px;
 }*/
 
+.movie-title {
+   color: #000000;
+   font-weight: 800;
+}
