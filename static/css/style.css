@@ -156,19 +156,7 @@
 .movie-text p{
     right: 200;
 }
-/*.movie-text{
-  height: 100px;
-  visibility: visible;
-  opacity: 0;
-  transition: all 200ms ease-in-out;
-}
 
-.movie-text ul{
-  list-style-type: circle;
-  list-style-position: inside;
-  text-align: left;
-  padding: 5px;
-}*/
 
 .movie-title {
    color: #000000;
