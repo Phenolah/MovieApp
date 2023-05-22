@@ -162,3 +162,18 @@
    color: #000000;
    font-weight: 800;
 }
+
+#likebtn{
+   font-size: 32px;
+   color: green;
+   background-color: var(--main-color);
+}
+
+#dislikelikebtn{
+   font-size: 32px;
+   color: red;
+   background-color: var(--main-color);
+}
+.likeordislikebtn{
+    margin-bottom: 20px;
+}
