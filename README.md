@@ -10,6 +10,11 @@ Tech Stack Used:
 - CSS3
 - Cloudinary
 
+
+HOME PAGE:
+
+![Screenshot (59)](https://github.com/Phenolah/MovieApp/assets/104977409/f8bf9c76-e709-4b65-a6a0-d724f379000e)
+
 💻 Getting Started To get a local copy up and running, follow these steps.
 
 - Download the files from this repo
@@ -23,7 +28,3 @@ $pip install -r requirements.txt
 $python manage.py migrate $python manage.py runserver
 
 - Visit 127.0.0.1:8000 in your browser to enjoy the awesome app!
-HOME PAGE:
-
-![Screenshot (59)](https://github.com/Phenolah/MovieApp/assets/104977409/f8bf9c76-e709-4b65-a6a0-d724f379000e)
-
