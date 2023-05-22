@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+#from tmdbv3api import TMDb
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -139,12 +140,10 @@ STATICFILES_FINDERS = (
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-'''CLOUDINARY_STORAGE = {
+CLOUDINARY_STORAGE = {
     'CLOUD_NAME': 'duqzuzwfs',
     'API_KEY': '389157534879644',
     'API_SECRET': 'DsUbTir0jsJweG5aJcQc0m2VY6c',
     'API_PROXY' : 'http://proxy.server:3128',
     'SECURE': True
-}'''
-
-
+}
