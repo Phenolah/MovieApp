@@ -46,11 +46,10 @@ def movie_by_genre(request):
     # render the template with the movies data
     return render(request, 'movie.html', context)\
 
+
 def search(request):
     # Get the query from the search bar
     query = request.GET.get('q')
-
-    # If the query is not empty
     if query:
         # API request URL based on the query and API key
         search_url = f"https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&query={query}&api_key=5b53dca38bee489bbad4e8d7394d6438"
@@ -71,8 +70,6 @@ def search(request):
             'query': query
         }
     else:
-        # If the query is empty, set search_results to None
-        return HttpResponse("Please enter a search query")
         context = {}
 
     return render(request, 'search.html', context)
