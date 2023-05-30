@@ -16,7 +16,7 @@ import requests
         print(recommendation.title)
         print(recommendation.overview)
         print(recommendation.poster_path)
-    return render(request, 'movie.html')'''
+    return render(request, 'home.html')'''
 
 import requests
 
@@ -44,7 +44,7 @@ def movie_by_genre(request):
 
     context = {'movies': movie}
     # render the template with the movies data
-    return render(request, 'movie.html', context)\
+    return render(request, 'home.html', context)\
 
 
 def search(request):
@@ -73,3 +73,23 @@ def search(request):
         context = {}
 
     return render(request, 'search.html', context)
+
+
+#Categorize movies based on genres
+def movie_by_genres(request):
+    context = {}
+    return render(request, context)
+
+def watchlist(request):
+    context = {}
+    return render(request, context)
+
+def rating(request):
+    context = {}
+    return render(request, context)
+def want_to_watch(request):
+    context = {}
+    return render(request, context)
+
+def login(request):
+    return render(request)
