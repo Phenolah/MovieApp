@@ -183,3 +183,33 @@
    justify-content: center;
    text-align:center;
 }
+.header .logo{
+    text-align: left;
+    font-weight: 200;
+}
+.header .navbar{
+   text-align: right;
+   font-weight: 300;
+}
+.header .navbar ul{
+   margin: 0;
+   padding: 0;
+   list-style: none;
+   text-align: right;
+   display: inline-block;
+
+}
+.header .navbar ul li{
+   display: inline-inline-block;
+   text-align: right;
+   margin-right: 20px;
+}
+.footer {
+    color: black;
+    text-align: center;
+
+}
+.footer h5{
+   font-family: "Times New Roman", Times, serif;
+   font-weight: 3opx;
+}
