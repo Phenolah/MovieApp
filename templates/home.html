@@ -1,21 +1,7 @@
+{% extends "base.html" %}
 {% load static %}
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA_Compatible" content="IE+edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="Did Coding Limited & James Granger Design ">
-    <meta>
-    <title> Phenolah's Portfolio Website </title>
-    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
-    <link rel="canonical" href="{{request.path}}">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
-    <link rel="stylesheet" type="text/css" href="{% static "/css/style.css" %}">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-</head>
+
+{% block content %}
 <body class='movie' >
 <div class='container'>
 
@@ -35,7 +21,7 @@
    <div class="genre">
        <h3> Choose a genre:</h3>
    </div>
- {% block content %}
+
   <div class="choice">
      <select name="genre-choice" id="genre-choice" >
          <option value="">Action</option>
@@ -95,7 +81,8 @@
 <br>
 <br>
 </section>
-{% endblock %}
 
 </body>
 </html>
+
+{% endblock %}
