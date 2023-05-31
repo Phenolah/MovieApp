@@ -1,5 +1,7 @@
 from django.shortcuts import render, HttpResponse
 from tmdbv3api import TMDb, Movie
+from .forms import *
+from django.shortcuts import redirect
 import requests
 # Create your views here.
 
@@ -90,6 +92,9 @@ def rating(request):
 def want_to_watch(request):
     context = {}
     return render(request, context)
-
 def login(request):
-    return render(request)
+    form = UserRegistration(request.POST)
+    context = {'fields': form}
+    if request.user.is_authenticated:
+        return redirect('home.html')
+    return render (request, 'login.html', context)
