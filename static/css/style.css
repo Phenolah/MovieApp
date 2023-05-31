@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
 
+:root{
+    --main-color: #ce8c97;
+    --text-color: #FFFFFF;
+    --second-color: #000000;
+    --border-color: #FFFFFF;
+}
 *{
    font-family: 'poppins', sans-serif;
    margin:0;
@@ -11,14 +17,9 @@
    text-transform: capitalize;
    scroll-behaviour: smooth;
    scroll-padding-top: 3.5rem;
+   background-color: var(--main-color);
 }
 
-:root{
-    --main-color: #ce8c97;
-    --text-color: #FFFFFF;
-    --second-color: #000000;
-    --border-color: #FFFFFF;
-}
 
 .body{
   background-color: var(--main-color);
@@ -183,10 +184,17 @@
    justify-content: center;
    text-align:center;
 }
+*{
+   background-color: var(--main-color);
+}
+.container{
+  background-color: var(--main-color) ;
+}
 .header {
     display: flex;
     padding: 20px;
     align-items: center;
+
   }
 
   .header .logo {
@@ -213,7 +221,13 @@
      font-size: 1.3rem;
      font-weight: 500;
   }
-
+.login-form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--second-color);
+}
 .footer {
     color: black;
     text-align: center;
@@ -222,4 +236,5 @@
 .footer h5{
    font-family: "Times New Roman", Times, serif;
    font-weight: 3opx;
+   background-color: var(--main-color) ;
 }
