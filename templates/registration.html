@@ -2,16 +2,22 @@
 {% load static %}
 
 {% block content %}
-<form contact="" method="post">
+<form contact="" method="post" id="RegForm">
  {% csrf_token %}
-   <div class='login-form'>
+   <div class='Reg-form'>
       {% for field in fields %}
       {{field.label}}
       <br>
       {{field}}
+      <br>
+      <br>
       {% endfor %}
-      <button type="submit" class="login-btn" > Submit </button>
-      <small>Already have an account? <a href="" > Login </a></small>
+      <button type="submit" class="Reg-btn" > Submit </button>
+      <br>
+      <br>
+      <small>Already have an account? <a href="{% url 'login' %}" > Login </a></small>
+    <br>
+    <br>
     </div>
 </form>
 {% endblock%}
