@@ -1,9 +1,10 @@
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.models import User
 from django import forms
+from django.contrib.auth.forms import AuthenticationForm
 
 #https://docs.djangoproject.com/en/1.8/_modules/django/contrib/auth/forms/#UserCreationForm
-class UserRegistration(UserCreationForm):
+class UserRegistrationForm(UserCreationForm):
     error_messages = {
         'password_mismatch': ("The two password fields didn't match.")
     }
@@ -19,3 +20,18 @@ class UserRegistration(UserCreationForm):
                 code='password_mismatch',
             )
         return password2
+
+class UserLoginForm(AuthenticationForm):
+    '''username = forms.CharField(widget=forms.TextInput(attrs={
+        'placeholder': 'Username',
+        'type': 'text',
+    }))
+    password = forms.CharField(widget=forms.TextInput(attrs={
+        'placeholder': 'Password',
+        'type': 'text',
+    }))'''
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['username'].widget.attrs.update({'autofocus': True})
+    def confirm_login_allowed(self, user):
+        pass
