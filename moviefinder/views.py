@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+ from django.shortcuts import render, HttpResponse
 from tmdbv3api import TMDb, Movie
 from .forms import *
 from django.shortcuts import redirect
@@ -93,8 +93,10 @@ def want_to_watch(request):
     context = {}
     return render(request, context)
 def login(request):
+    #render user registration form 
     form = UserRegistration(request.POST)
     context = {'fields': form}
+    #confirm if user is  authenticated 
     if request.user.is_authenticated:
         return redirect('home.html')
     return render (request, 'login.html', context)
