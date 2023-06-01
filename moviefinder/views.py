@@ -1,7 +1,9 @@
- from django.shortcuts import render, HttpResponse
+from django.shortcuts import render, HttpResponse
 from tmdbv3api import TMDb, Movie
 from .forms import *
+from django.contrib.auth import authenticate, login
 from django.shortcuts import redirect
+from django.contrib import messages
 import requests
 # Create your views here.
 
@@ -93,10 +95,46 @@ def want_to_watch(request):
     context = {}
     return render(request, context)
 def login(request):
-    #render user registration form 
-    form = UserRegistration(request.POST)
-    context = {'fields': form}
-    #confirm if user is  authenticated 
-    if request.user.is_authenticated:
-        return redirect('home.html')
-    return render (request, 'login.html', context)
+    if request.method == 'POST':
+        form = UserLoginForm(request.POST)
+        if form.is_valid():
+            username = form.cleaned_data['username']
+            password = form.cleaned_data['password']
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')
+            else:
+                messages.error(request, 'Wrong credentials. Try again.')
+                return redirect('login')
+    else:
+        form = UserLoginForm()
+    context = {'forms': form}
+    return render(request, 'login.html', context)
+'''def login(request):
+
+    if request.method == 'POST':
+        form = UserRegistration(request.POST)
+        if form.is_valid():
+            username = request.POST.get('username')
+            password = request.POST.get('password')
+            user = authenticate(request, username=username, password=password)
+            if user is not None:
+                login(request, user)
+                return redirect('home')
+            else:
+                messages.error(request, 'Wrong credentials.Try again')
+                return redirect('login')
+        else:
+            form=UserRegistration()
+            context = {'form': form}
+        return render(request, 'login.html', context)'''
+
+def registration(request):
+    form = UserRegistrationForm(request.POST)
+
+    context = {'fields': form }
+    return render(request, 'registration.html', context)
+
+def logout(request):
+    return render(request, 'logout.html')
