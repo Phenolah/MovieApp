@@ -21,8 +21,9 @@
 }
 
 
-.body{
-  background-color: var(--main-color);
+body{
+  background-color: var(--main-color) !important;
+
 }
 .movie{
   background: var(--main-color);
@@ -184,12 +185,10 @@
    justify-content: center;
    text-align:center;
 }
-*{
-   background-color: var(--main-color);
+.messages li{
+   color: black;
 }
-.container{
-  background-color: var(--main-color) ;
-}
+
 .header {
     display: flex;
     padding: 20px;
@@ -222,19 +221,53 @@
      font-weight: 500;
   }
 .login-form{
-    display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
     background-color: var(--second-color);
 }
+.login-form label,
+.login-form input,
+.login-form button,
+.login-form small{
+
+   margin-bottom: 10px;
+}
+.Reg-form{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--second-color);
+}
+.Reg-form label,
+.Reg-form input,
+.Reg-form button,
+.Reg-form small{
+
+   margin-bottom: 10px;
+}
+.logout-form{
+   justify-center: center;
+   text-align: center;
+
+}
+.logout-form h5{
+   color: black;
+}
+
 .footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: var(--main-color);
     color: black;
     text-align: center;
+    padding: 10px;
 
 }
 .footer h5{
    font-family: "Times New Roman", Times, serif;
-   font-weight: 3opx;
-   background-color: var(--main-color) ;
+   font-weight: 30px;
+   background-color: var(--main-color);
+   margin-bottom: 50;
 }
