@@ -1,4 +1,4 @@
-from django.shortcuts import render, HttpResponse
+ from django.shortcuts import render, HttpResponse
 from tmdbv3api import TMDb, Movie
 from .forms import *
 from django.contrib.auth import authenticate, login
@@ -123,13 +123,12 @@ def login(request):
                 login(request, user)
                 return redirect('home')
             else:
-                messages.error(request, 'Wrong credentials.Try again')
+                messages.error(request, 'Incorrect password or username.Try again.')
                 return redirect('login')
         else:
             form=UserRegistration()
             context = {'form': form}
         return render(request, 'login.html', context)'''
-
 def registration(request):
     form = UserRegistrationForm(request.POST)
 
