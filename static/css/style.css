@@ -220,6 +220,7 @@ body{
      font-size: 1.3rem;
      font-weight: 500;
   }
+/** Login-Form **/
 .login-form{
     justify-content: center;
     align-items: center;
@@ -233,6 +234,8 @@ body{
 
    margin-bottom: 10px;
 }
+
+/** ----- Registration Form **/
 .Reg-form{
     justify-content: center;
     align-items: center;
@@ -254,7 +257,7 @@ body{
 .logout-form h5{
    color: black;
 }
-
+/** ------ footer ----- **/
 .footer {
     position: absolute;
     bottom: 0;
