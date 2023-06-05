@@ -220,7 +220,6 @@ body{
      font-size: 1.3rem;
      font-weight: 500;
   }
-/** Login-Form **/
 .login-form{
     justify-content: center;
     align-items: center;
@@ -234,8 +233,6 @@ body{
 
    margin-bottom: 10px;
 }
-
-/** ----- Registration Form **/
 .Reg-form{
     justify-content: center;
     align-items: center;
@@ -257,7 +254,29 @@ body{
 .logout-form h5{
    color: black;
 }
-/** ------ footer ----- **/
+.movie .movie-search{
+   display: flex;
+}
+.movie .search{
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+.movie .movie-search-id{
+   flex: 1 1 0%;
+  background-color:  #ED7014;
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-right: 1rem;
+  color: var(--light);
+  font-size: 1.25rem;
+}
+
+.movie-search-id::placeholder{
+    color: black;
+}
 .footer {
     position: absolute;
     bottom: 0;
