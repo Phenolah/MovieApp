@@ -109,26 +109,10 @@ def login(request):
                 return redirect('login')
     else:
         form = UserLoginForm()
-    context = {'forms': form}
+    context = {'form': form}
     return render(request, 'login.html', context)
-'''def login(request):
 
-    if request.method == 'POST':
-        form = UserRegistration(request.POST)
-        if form.is_valid():
-            username = request.POST.get('username')
-            password = request.POST.get('password')
-            user = authenticate(request, username=username, password=password)
-            if user is not None:
-                login(request, user)
-                return redirect('home')
-            else:
-                messages.error(request, 'Incorrect password or username.Try again.')
-                return redirect('login')
-        else:
-            form=UserRegistration()
-            context = {'form': form}
-        return render(request, 'login.html', context)'''
+   
 def registration(request):
     form = UserRegistrationForm(request.POST)
 
