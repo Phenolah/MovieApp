@@ -5,17 +5,13 @@
 <form contact="" method="post" id="loginForm">
  {% csrf_token %}
    <div class='login-form'>
-      {% for form in forms %}
-      {{form.username.label_tag}}
+      {% for field in form %}
+      {{field.label}}
       <br>
-      {{form.username}}
-      <br>
-      <br>
-      {{form.password.label_tag}}
-      <br>
-      {{form.password}}
+      {{field}}
       <br>
       <br>
+      
       {% endfor %}
       <button type="submit" class="login-btn" > Submit </button>
       <br>
