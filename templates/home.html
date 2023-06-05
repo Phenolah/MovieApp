@@ -2,6 +2,14 @@
 {% load static %}
 
 {% block content %}
+<body class="movie">
+  <div class="container">
+      <form contact="" method='get' id='movie-search'>
+         <input type='text' id='movie-search-id' placeholder="What do you want to watch?">
+         <button type='submit' id='search'> Search </button>
+      </form>
+  </div>
+</body>
 <body class='movie' >
 <div class='container'>
 
@@ -69,6 +77,7 @@
 </div>
 </div>
 </div>
+
 <div id="likeordislikebtn">
    <button id="likebtn">
      <i class="fa fa-thumbs-up" aria-hidden="true"></i>
