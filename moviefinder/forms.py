@@ -22,16 +22,13 @@ class UserRegistrationForm(UserCreationForm):
         return password2
 
 class UserLoginForm(AuthenticationForm):
-    '''username = forms.CharField(widget=forms.TextInput(attrs={
+    username = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Username',
         'type': 'text',
+        'class': 'username',
     }))
     password = forms.CharField(widget=forms.TextInput(attrs={
         'placeholder': 'Password',
         'type': 'text',
-    }))'''
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['username'].widget.attrs.update({'autofocus': True})
-    def confirm_login_allowed(self, user):
-        pass
+        'class': 'password',
+    }))
