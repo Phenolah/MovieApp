@@ -32,12 +32,7 @@ body{
    align-items: center;
    margin-top: 0;
 }
-.movie .row{
-  display: center;
-   justify-content: center;
-   align-items: center;
-   margin-top: 5px;
-}
+.movie .row
 
 .movie h1{
    color: var(--text-color);
@@ -60,9 +55,7 @@ body{
      height: 80;
      width: 80;
      top: 30;
-     scale: 0.9;
-}
-
+     
 
 .movie .right-image{
      border-radius: 50%;
