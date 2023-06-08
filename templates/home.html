@@ -1,12 +1,28 @@
-p{% extends "base.html" %}
+{% extends "base.html" %}
 {% load static %}
 
 {% block content %}
 <body class="movie">
-  <div class="container">
-      <form contact="" method='get' id='movie-search'>
-         <input type='text' id='movie-search-id' placeholder="e.g The office ?">
-         <button type='submit' id='search'> Search </button>
-      </form>
+ <section class='search-bar'>
+  <div class="container justify-content-center">
+    <div class='row'>
+       <div class='col-md-8'>
+         <div class='input-group-mb-3'>
+          <input type='text' class='form-control input-text' placeholder='Eg. The Office'>
+           <div class='input-group-append'>
+             <button class='search-btn' type="submit"><i class="fa fa-search"></i> </button>
+           </div>
+         </div>
+       </div>
+
+    </div>
   </div>
+ </section>
+
+ <section>
+
+ </section>
 </body>
+
+
+{% endblock %}
