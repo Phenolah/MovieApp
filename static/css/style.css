@@ -25,140 +25,15 @@ body{
   background-color: var(--main-color) !important;
 
 }
-.movie{
+/*.movie{
   background: var(--main-color);
    display: center;
    justify-content: center;
    align-items: center;
    margin-top: 0;
-}
-.movie .row
-
-.movie h1{
-   color: var(--text-color);
-   margin: 20px 0px 20px;
-   font-size: 4.0rem;
-   text-align: center;
-   margin-bottom: 5px;
-   top: 30;
-}
-
-.movie h3{
-  margin: 20px 0px 20px;
-  font-size: 1.5rem;
-  text-align: center;
-  margin-top: 0;
-}
-
-.movie .left-image{
-     border-radius: 50%;
-     height: 80;
-     width: 80;
-     top: 30;
-     
-
-.movie .right-image{
-     border-radius: 50%;
-     height: 80;
-     width: 80;
-     bottom : 30;
-     scale: 0.9;
-}
-.choice .genre-choice{
-    display: center;
-    justify-content: center;
-    align-items: center;
-    font-weight:normal;
-    text-align: center;
-    width: 20px;
-}
-.option{
-   display: center;
-   justify-content: center;
-   align-items: center;
-
-}
-.movie .choice,
-.movie .genre-btn {
-  display: flex;
-  justify-content: center;
-}
-
-
-.movie .genre-choice {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 40px;
-  text-align: center;
-  width: 100px;
-  margin-top: 1.0rem;
-}
-
-.button {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   text-align: center;
-
-}
-.button .genre-btn{
-    background: var(--second-color);
-    color: var(--text-color);
-    border: 2px solid transparent;
-    font-weight: 600;
-    padding: 13px 30px;
-    border-radius: 30px;
-    transition: ease .35s;
-    margin-top: 1.0rem;
-    margin-bottom: 1.5rem;
-    right: 200;
-}
-
-.container {
-   text-align:center;
-}
-
-/*.movie-posts{
-   height: 300px;
-   width: 250px;
-   padding: 4px;
-   box-shadow: 0px 0px 8px 2px var(--border-color);
-   margin: 20px;
-   display: center;
-   flex-direction: column;
-   justify-content: center;
-   align-items: center;
 }*/
 
-.movie-title{
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.0rem;
-}
-
-.movie-img{
-   height: 270px;
-   text-align: center;
-   margin-bottom: 0;
-}
-.movie-img .img{
-   height: 100%;
-   width: 100%;
-}
-.movie-text p{
-    right: 200;
-}
-
-
-.movie-title {
-   color: #000000;
-   font-weight: 800;
-}
-
-#likebtn{
+/**#likebtn{
    font-size: 32px;
    color: green;
    background-color: var(--main-color);
@@ -171,13 +46,8 @@ body{
 }
 .likeordislikebtn{
     margin-bottom: 20px;
-}
-.search-movie{
-   display: flex;
-   align-items: center;
-   justify-content: center;
-   text-align:center;
-}
+}**/
+
 .messages li{
    color: black;
 }
@@ -247,29 +117,28 @@ body{
 .logout-form h5{
    color: black;
 }
-.movie .movie-search{
-   display: flex;
-}
-.movie .search{
-  appearance: none;
-  border: none;
-  outline: none;
-  background: none;
+
+.container{
+    margin-top:200px;
 }
 
-.movie .movie-search-id{
-   flex: 1 1 0%;
-  background-color:  #ED7014;
-  padding: 1rem;
-  border-radius: 1rem;
-  margin-right: 1rem;
-  color: var(--light);
-  font-size: 1.25rem;
+.btn:hover{
+    color:#fff;
 }
 
-.movie-search-id::placeholder{
-    color: black;
+.input-text:focus{
+
+
+    box-shadow: 0px 0px 0px;
+    border-color:#f8c146;
+    outline: 0px;
 }
+
+.form-control {
+    border: 1px solid #f8c146;
+}
+/**  **/
+
 .footer {
     position: absolute;
     bottom: 0;
@@ -286,3 +155,6 @@ body{
    background-color: var(--main-color);
    margin-bottom: 50;
 }
+
+
+
