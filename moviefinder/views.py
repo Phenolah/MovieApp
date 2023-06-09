@@ -51,34 +51,7 @@ def movie_by_genre(request):
     return render(request, 'home.html', context)
 
 
-'''def search(request):
-    # Get the query from the search bar
-    query = request.GET.get('q')
-    if query:
-        # API request URL based on the query and API key
-        search_url = f"https://api.themoviedb.org/3/search/movie?include_adult=false&language=en-US&page=1&query={query}&api_key=5b53dca38bee489bbad4e8d7394d6438"
 
-        # Make a request to the API and retrieve the search results
-        response = requests.get(search_url)
-
-        # Check if the request was successful
-        if response.status_code == 200:
-            # Retrieve the search results from the response JSON
-            search_results = response.json()
-        else:
-            # Handle API request error
-            search_results = None
-
-        context = {
-            'results': search_results,
-            'query': query
-        }
-    else:
-        context = {}
-
-    return render(request, 'search.html', context)
-
-'''
 #Categorize movies based on genres
 def movie_by_genres(request):
     context = {}
