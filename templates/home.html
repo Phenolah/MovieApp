@@ -3,26 +3,68 @@
 
 {% block content %}
 <body class="movie">
+
+ <!-- searchbar -->
+
  <section class='search-bar'>
   <div class="container justify-content-center">
     <div class='row'>
        <div class='col-md-8'>
          <div class='input-group-mb-3'>
-          <input type='text' class='form-control input-text' placeholder='Eg. The Office'>
+             <div class="input-group-prepend">
+                 <span class="input-group-text">
+                     <i class="fa fa-search"></i>
+                 </span>
+
+             <input  type='text' class='form-control input-text' placeholder='Eg. The Office'>
            <div class='input-group-append'>
-             <button class='search-btn' type="submit"><i class="fa fa-search"></i> </button>
+             <button class='search-btn' type="submit"> search </button>
            </div>
          </div>
-       </div>
-
+         </div>
     </div>
   </div>
+  </div>
+     <br>
+     <br>
+
  </section>
 
- <section>
+ <!--- trending movies --->
+ <section class="trending-movies">
+     <div class="container">
+         <div class="row">
+             <div class="col md-4">
+                 <img src="{%static 'images/movieapp.jpg'%}" alt="no image" width="350" height="350">
+                 <br>
+                 <br>
+                 <h5> The fault in our stars</h5>
+             </div>
+             <div class="col md-4">
+                 <img src="{%static 'images/movieapp.jpg'%}" alt="no image" width="350" height="350">
+                 <br>
+                 <br>
+                 <h5> The fault in our stars</h5>
+             </div>
+             <div class="col md-4">
+                 <img src="{%static 'images/movieapp.jpg'%}" alt="no image" width="350" height="350">
+                 <br>
+                 <br>
+                 <h5> The fault in our stars</h5>
+             </div>
+             <div class="col md-4">
+                 <img src="{%static 'images/movieapp.jpg'%}" alt="no image" width="300" height="350">
+                 <br>
+                 <br>
+                 <h5> The fault in our stars</h5>
+             </div>
+         </div>
+
+     </div>
 
  </section>
 </body>
 
 
+       </div>
 {% endblock %}
