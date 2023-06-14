@@ -4,6 +4,8 @@ from .forms import *
 from django.contrib.auth import authenticate, login
 from django.shortcuts import redirect
 from django.contrib import messages
+from django.views.generic import DetailView, ListView
+from .models import *
 import requests
 # Create your views here.
 
@@ -94,3 +96,7 @@ def registration(request):
 
 def logout(request):
     return render(request, 'logout.html')
+
+class MoviedetailView(ListView):
+    model = MovieDetails
+    template_name = 'moviedetails.html'
