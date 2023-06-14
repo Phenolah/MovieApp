@@ -154,6 +154,17 @@ body{
     border: 1px solid #f8c146;
 }
 
+/** trending **/
+  .trending {
+    text-align: left;
+  }
+
+  .previous,
+  .next {
+    float: left;
+    margin-right: 10px;
+  }
+
 /** footer **/
 
 .footer {
@@ -172,5 +183,3 @@ body{
    background-color: var(--main-color);
    margin-bottom: 50;
 }
-
-
