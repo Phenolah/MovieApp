@@ -27,8 +27,8 @@ class UserLoginForm(AuthenticationForm):
         'type': 'text',
         'class': 'username',
     }))
-    password = forms.CharField(widget=forms.TextInput(attrs={
+    password = forms.CharField(widget=forms.PasswordInput(attrs={
         'placeholder': 'Password',
-        'type': 'text',
+        'type': 'password',
         'class': 'password',
     }))
