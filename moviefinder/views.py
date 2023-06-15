@@ -6,6 +6,7 @@ from django.shortcuts import redirect
 from django.contrib import messages
 from django.views.generic import DetailView, ListView
 from .models import *
+from django.contrib.auth.decorators import login_required
 import requests
 # Create your views here.
 
@@ -59,17 +60,22 @@ def movie_by_genres(request):
     context = {}
     return render(request, context)
 
+@login_required()
 def watchlist(request):
     context = {}
     return render(request, context)
 
+@login_required
 def rating(request):
     context = {}
     return render(request, context)
+
+@login_required
 def want_to_watch(request):
     context = {}
     return render(request, context)
-def login(request):
+
+def user_login(request):
     if request.method == 'POST':
         form = UserLoginForm(request.POST)
         if form.is_valid():
@@ -82,17 +88,29 @@ def login(request):
             else:
                 messages.error(request, 'Wrong credentials. Try again.')
                 return redirect('login')
-    else:
-        form = UserLoginForm()
-    context = {'form': form}
-    return render(request, 'login.html', context)
-
+        else:
+            form = UserLoginForm()
+            context = {
+               "form": form,
+            }
+            return render(request, 'login.html', context)
 
 def registration(request):
-    form = UserRegistrationForm(request.POST)
+    if request.user.is_authenticated:
+        return redirect('home')
+    else:
+        if request.method == 'POST':
+            form = UserRegistrationForm(request.POST)
+            if form.is_valid():
+                form.save()
+                username = form.cleaned_data.get('username')
+                messages.success(request, f'Hi {username}, your account was successfully created')
+                return redirect('login')
+        else:
+            form = UserRegistrationForm()
+            context = {'fields': form}
+            return render(request, 'registration.html', context)
 
-    context = {'fields': form }
-    return render(request, 'registration.html', context)
 
 def logout(request):
     return render(request, 'logout.html')
