@@ -2,7 +2,12 @@
 {% load static %}
 
 {% block content %}
-<form contact="" method="post" id="loginForm">
+
+{% if form.errors %}
+<p> Your username and password didn't match. Please try again. </p>
+{% endif %}
+
+<form contact="" method="post" id="loginForm" action="{% url 'home' %}">
  {% csrf_token %}
    <div class='login-form'>
       {% for field in form %}
@@ -11,14 +16,17 @@
       {{field}}
       <br>
       <br>
-      
       {% endfor %}
       <button type="submit" class="login-btn" > Submit </button>
       <br>
-      <br>
+       <br>
+       <small><a href="{%url 'password_reset' %}"> Forgot Password?</a></small>
+       <br>
+       <br>
       <small>Do not have an account yet? <a href="{% url 'registration' %}" > Register Now</a></small>
     <br>
     <br>
     </div>
 </form>
+
 {% endblock%}
