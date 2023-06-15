@@ -148,3 +148,5 @@ CLOUDINARY_STORAGE = {
     'API_PROXY' : 'http://proxy.server:3128',
     'SECURE': True
 }
+LOGIN_URL = 'login'
+LOGIN_REDIRECT_URL ='home'
