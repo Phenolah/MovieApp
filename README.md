@@ -9,11 +9,10 @@ Tech Stack Used:
 - HTML5
 - CSS3
 - Cloudinary
-
+- Reactjs
 
 HOME PAGE:
 
-![Screenshot (59)](https://github.com/Phenolah/MovieApp/assets/104977409/f8bf9c76-e709-4b65-a6a0-d724f379000e)
 
 💻 Getting Started To get a local copy up and running, follow these steps.
 
