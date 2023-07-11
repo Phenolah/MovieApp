@@ -157,14 +157,14 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh; /* Adjust the height value as needed */
-  border-radius: 20px; /* Set the border-radius value to half of the desired height */
-  overflow: hidden; /* Hide any content that goes beyond the oval shape */
+  /*height: 100vh;  Adjust the height value as needed */
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .search-bar {
-  margin-top: 50px; /* Adjust the margin-top value as needed */
-  width: 100%; /* Set the width to 100% */
+  margin-top: 50px;
+  width: 100%;
   border-radius: 20px;
   overflow: hidden;
 }
@@ -172,23 +172,32 @@ body{
 .input-group-mb-3 {
   display: flex;
   align-items: center;
-  width: 100%; /* Set the width to 100% */
+  width: 100%;
 }
 
 .input-group-prepend {
-  margin-right: 10px; /* Adjust the margin-right value as needed */
+  margin-right: 10px;
 }
 
 .input-text {
-  flex-grow: 1; /* Allow the input field to grow and fill the remaining space */
+  flex-grow: 1;
 }
 
 .search-btn {
-  padding: 8px 16px; /* Adjust the padding values as needed */
-  background-color: black; /* Set the background color to black */
-  color: white; /* Set the text color to white */
-  /*border-radius: 20px;  Set the border-radius value to half of the desired height
-  overflow: hidden;  Hide any content that goes beyond the oval shape */
+  padding: 8px 16px;
+  background-color: black;
+  color: white;
+}
+
+.action .previous{
+   display: flex;
+   align-items: right;
+   justify-content: right;
+}
+.action .next{
+   display: flex;
+   align-items: right;
+   justify-content: right;
 }
 
 /** trending **/
@@ -220,5 +229,4 @@ body{
    background-color: var(--main-color);
    margin-bottom: 50;
 }
-
 
