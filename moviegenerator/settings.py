@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 
 from pathlib import Path
 import os
+from datetime import timedelta
 #from tmdbv3api import TMDb
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -40,8 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'moviefinder',
-    'rest-framework',
+    'rest_framework',
     'authentication',
+    'rest_framework_simplejwt',
+    'coreapi',
 ]
 
 MIDDLEWARE = [
@@ -129,7 +132,21 @@ STATICFILES_DIRS = (
 MEDIA_URL = '/images/'
 MEDIA_ROOT= os.path.join(BASE_DIR, 'images/')
 
+#https://jwt.io
+JWT_SECRET_KEY = os.environ.get('JWT_SECRET_KEY')
 #DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
+
+#https://www.freecodecamp.org/news/how-to-use-jwt-and-django-rest-framework-to-get-tokens/
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': [
+        'authentication.jwt.JWTAuthentication',
+    ],
+}
+
+SIMPLE_JWT = {
+    'ACCESS_TOKEN_LIFETIME': timedelta(minutes=5),
+    "REFRESH_TOKEN_LIFETIME": timedelta(days=1)
+}
 
 STATICFILES_FINDERS = (
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -152,3 +169,5 @@ CLOUDINARY_STORAGE = {
 }
 LOGIN_URL = 'login'
 LOGIN_REDIRECT_URL ='home'
+
+#export JWT_SECRET_KEY = '<SECRET_KEY>'
