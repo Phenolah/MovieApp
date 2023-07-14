@@ -32,7 +32,7 @@ class LoginView(GenericAPIView):
             auth_token = jwt.encode(
                 {"username": user.username},
                     settings.JWT_SECRET_KEY,
-                algorithim="HS256",
+                algorithm="HS256",
 
             )
 
