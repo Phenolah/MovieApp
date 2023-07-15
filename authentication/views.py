@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from rest_framework.generics import GenericAPIView
-from .serializers import UserSerializer, LoginSerializer
+from .serializers import UserSerializer
 from rest_framework.response import Response
 from rest_framework import status
 from django.contrib import auth
@@ -40,6 +40,5 @@ class LoginView(GenericAPIView):
 
             data = {'user': serializer.data, 'token': auth_token}
             return Response(data, status=status.HTTP_200_OK)
-
-        return Response({'detail': 'Invalid credentials, please try again'}, status=status.HTTP_401_UNAUTHORIZED)
+         return Response({'detail': 'Invalid credentials, please try again'}, status=status.HTTP_401_UNAUTHORIZED)   
 
