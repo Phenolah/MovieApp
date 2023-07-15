@@ -22,9 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('',include('moviefinder.urls')),
     path('api/auth', include('authentication.urls')),
-    #an endpoint for obtaining JWT tokens
-    path('api/token/', jwt_views.TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('api/token/refresh/', jwt_views.TokenRefreshView.as_view(), name='token_refresh')
-
 ]+ static(settings.STATIC_URL, document_root=settings.STATICFILES_DIRS)
 urlpatterns += (static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT) )
