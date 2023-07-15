@@ -33,7 +33,8 @@ class UserSerializer(serializers.ModelSerializer):
             )
         return super().validate(attrs)
     def create(self, validated_data):
-        user = User(
+        return User.objects.create_user(**validated_data)
+    '''user = User(
             email = validated_data['email'],
             username = validated_data['username']
         )
@@ -42,12 +43,12 @@ class UserSerializer(serializers.ModelSerializer):
         user.save()
         return user
         #return User.objects.create_user(**validated_data)
-    '''def update(self, instance, validate_data):
+    def update(self, instance, validate_data):
         instance.email = validate_data.get('email', instance.email)
         instance.password = validate_data.get('password', instance.password)
         instance.save()
         return instance
-        '''
+        
 
 class LoginSerializer(serializers.ModelSerializer):
     username = serializers.CharField(
@@ -79,4 +80,6 @@ class LoginSerializer(serializers.ModelSerializer):
                 raise serializers.ValidationError(msg, code='authorization')
 
             attrs['user'] = user
-            return attrs
+            return attrs'''
+
+
