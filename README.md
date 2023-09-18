@@ -1,4 +1,5 @@
 MovieApp
+
 ABOUT:
 
 This is a movie website consuming the TMDB API that allowed users to find random movies according to the selected genres.
